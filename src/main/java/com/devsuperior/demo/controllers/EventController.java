@@ -1,5 +1,6 @@
 package com.devsuperior.demo.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -16,6 +17,7 @@ import com.devsuperior.demo.services.EventService;
 @RequestMapping(value = "/events")
 public class EventController {
 	
+	@Autowired
 	private EventService service;
 	
 	@PutMapping(value = "/{id}")
